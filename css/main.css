@@ -4,6 +4,11 @@
 }
 /* End Reset */
 
+/* Start Variable */
+:root {
+    --main-color: #10cab7;
+}
+/* End Variable */
 
 /* Start Global */
 body {
@@ -90,6 +95,7 @@ body {
     visibility: hidden;
     opacity: 0;
     transition: .2s;
+    z-index: 2;
 }
 
 .header .links ul::before {
@@ -105,6 +111,7 @@ body {
 .header .links:hover ul {
     visibility: visible;
     opacity: 1;
+    z-index: 2;
 }
 
 .header .links ul li a {
@@ -124,6 +131,42 @@ body {
 }
 
 /* End Header */
+
+/* Start Landing */
+.landing {
+    background-image: url(../imgs/landing.jpg);
+    height: calc(100vh - 70px);
+    background-size: cover;
+    background-position-y: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+} 
+
+.intro-text {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    position: relative;
+    z-index: 1;
+    max-width: 100%;
+}
+
+.landing h1 {
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.landing p {
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+
+/* End Landing */
 
 
 
