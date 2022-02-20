@@ -4,10 +4,29 @@
 }
 /* End Reset */
 
+/* Start components */
+.special-heading {
+    text-align: center;
+    color: #ebeced;
+    font-size: 100px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -3px;
+    margin: 0;
+}
+
+.special-heading + p {
+    margin: -30px 0 0;
+    font-size: 20px;
+    color: #797979;
+    text-align: center;
+}
+/* End Components */
+
 /* Start Variable */
 :root {
     --main-color: #10cab7;
-    --section-padding: 60px 0;
+    --section-padding: 60px;
     --section-bacground-color: #f6f6f6;;
 }
 /* End Variable */
@@ -171,7 +190,8 @@ body {
 /* Start Features */
 .features {
     background-color: var(--section-bacground-color);
-    padding: var(--section-padding);
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
 }
 .features .container {
     display: grid;
@@ -200,5 +220,82 @@ body {
 }
 /* End Features */
 
+/* Start Services */
 
+.services-section {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+
+.services-section .services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 50px;
+    margin-top: 100px;
+}
+
+.services-content .service-item h3 {
+    margin: 0;
+}
+
+.services-content .service-item p {
+    color: rgb(68, 68, 68);
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+
+.services-content .service-item i {
+    color: var(--main-color);
+    width: 60px;
+}
+
+.services-content .service-item .item-box {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+    .services-content .service-item .item-box {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .services-content .service-item .item-box  i{
+        margin-bottom: 30px;
+    }
+}
+
+
+.services-content .service-item .item-box .text {
+    flex: 1;
+}
+
+.services-content .service-item .service-img {
+    position: relative;
+}
+
+.services-content .service-item .service-img::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: calc(100% + 100px);
+    background-color: #2c4755;
+    right: 40px;
+    top: -50px;
+    z-index: -1;
+}
+
+@media (max-width: 1200px) {
+    .services-content .service-item .service-img {
+        display: none;
+    }
+}
+
+.services-content .service-item img {
+    width: 260px;
+}
+/* End Services */
 
